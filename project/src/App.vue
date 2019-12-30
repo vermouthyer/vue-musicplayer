@@ -1,15 +1,20 @@
 <template>
   <div id="app">
-    hello Tracy
+    <m-header></m-header>
   </div>
 </template>
 
 <script>
-export default {}
+import MHeader from "components/MHeader/MHeader";
+export default {
+  components: {
+    MHeader
+  }
+};
 </script>
 
 <style scoped lang="stylus">
-@import "common/stylus/variable.styl"
+@import "~common/stylus/variable.styl";
 #app
   color: $color-theme
 </style>
