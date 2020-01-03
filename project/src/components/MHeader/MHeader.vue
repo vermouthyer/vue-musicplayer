@@ -18,7 +18,6 @@ export default {};
     height: 44px
     text-align: center
     color: $color-theme
-    background-color #fff
     font-size: 0
     .icon
       display: inline-block
