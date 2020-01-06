@@ -8,7 +8,7 @@
 
 <script>
 import MHeader from "components/MHeader/MHeader";
-import Tab from "components/Tab/Tab"
+import Tab from "components/Tab/Tab";
 export default {
   components: {
     MHeader,

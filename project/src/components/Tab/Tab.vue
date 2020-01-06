@@ -10,13 +10,13 @@
       <span class="tab-link">排行</span>
     </router-link>
     <router-link tag="div" class="tab-item" to="/search">
-    <span class="tab-link">搜索</span>
+      <span class="tab-link">搜索</span>
     </router-link>
   </div>
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style scoped lang="stylus">
@@ -35,5 +35,5 @@ export default {}
       &.router-link-active
         .tab-link
           color: $color-theme
-          border-bottom: 2px $color-theme solid   
+          border-bottom: 2px $color-theme solid
 </style>
