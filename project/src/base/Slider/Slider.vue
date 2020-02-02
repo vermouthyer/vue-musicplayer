@@ -98,6 +98,9 @@ export default {
       this.timer = setTimeout(() => {
         this.slider.next()
       }, this.interval)
+    },
+    destroyed () {
+      clearTimeout(this.timer)
     }
   }
 };

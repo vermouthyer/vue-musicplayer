@@ -1,5 +1,6 @@
 export const options = {
-  param: "callback"
+  param: "callback",
+  prefix: "jsonp"
 };
 
 export const ERR_OK = "";

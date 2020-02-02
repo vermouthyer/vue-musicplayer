@@ -1,4 +1,11 @@
 const path = require("path");
+const express = require("express");
+const app = express();
+let appDataForRecommendSlider = require("./public/recommendSlider.json");
+let recommendSlider = appDataForRecommendSlider;
+// let recommendPlaylist = require("./public/recommendPlaylist.json");
+let apiRoutes = express.Router();
+app.use("/api", apiRoutes);
 function resolve(dir) {
   return path.join(__dirname, dir);
 }
@@ -59,8 +66,15 @@ module.exports = {
     port: 8080,
     https: false,
     hotOnly: false,
-    proxy: null, // 设置代理
-    before: app => {}
+    before: app => {
+      app.get("/api/recommendSlider", (req, res) => {
+        res.json({
+          errno: 0,
+          data: recommendSlider
+        });
+      });
+    },
+    proxy: null // 设置代理
   },
   // 第三方插件配置
   pluginOptions: {
